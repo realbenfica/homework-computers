@@ -17,7 +17,7 @@ class App extends Component {
     return(
       <div className="App">
         <h1>COMPUTER MODELS</h1>
-        <select>
+        <select onClick={this.handleSubmit}>
           <option value="">-- pick a model --</option>
           {computers}
         </select>
