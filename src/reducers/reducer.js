@@ -22,11 +22,13 @@ const data = {
     origin: "USA"
   }
 }
+
 const initialState = Object.keys(data).map(i => data[i])
 
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
     case SELECT:
+    console.log(reducer)
       return [...state, action.payload]
     default:
         return state
