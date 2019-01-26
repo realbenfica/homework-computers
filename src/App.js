@@ -7,12 +7,19 @@ import { connect } from 'react-redux';
 
 class App extends Component {
   render() {
+    const key = this.props.select
+    const computers = key.map(computer => {
+      return (
+        <option key={computer.year}>{computer.manufacturer} ({computer.year})</option>
+      )
+    })
+
     return(
       <div className="App">
         <h1>COMPUTER MODELS</h1>
         <select>
           <option value="">-- pick a model --</option>
-          <option>{this.props.select.map(computer)}</option>
+          {computers}
         </select>
       </div>
     );
@@ -22,7 +29,7 @@ class App extends Component {
 const mapStateToProps = state => {
   console.log(state)
   return {
-    select: state.select
+    select: state
   }
 }
 
