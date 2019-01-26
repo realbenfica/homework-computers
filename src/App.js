@@ -31,16 +31,11 @@ class App extends Component {
   state = {
   }
 
-  // constructor(props) {
-  //   super(props);
-  //   this.state = array
-  // }
-
-  // updateSelection = () => {
-  //   let nextState = Object.assign({}, 
-  //     this.state, { event.target. } );
-  //   this.setState(nextState);
-  // }
+  updateSelection = () => {
+    let {manufacturer, year} = this.props
+    let nextState = Object.assign( {}, this.state, {manufacturer, year} )
+    this.setState(nextState);
+}
 
   render() {
     const key = Object.keys(data)
