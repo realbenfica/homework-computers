@@ -1,4 +1,4 @@
-import { SELECT } from '../actions/select'
+// import { SELECT } from '../actions/select'
 
 const data = {
   "Ivel Z3": {
@@ -27,10 +27,11 @@ const initialState = Object.keys(data).map(i => data[i])
 
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    case SELECT:
-    console.log(reducer)
-      return [...state, action.payload]
+    // case SELECT:
+    // console.log(SELECT)
+    //   return [...state, action.payload]
     default:
+    // console.log(state)
         return state
 }
 }
